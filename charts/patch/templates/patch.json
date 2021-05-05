@@ -53,7 +53,7 @@
   {{- with .Values.debugContainer }}
   {
     "op": "add",
-    "path": "{{$prefix}}/spec/containers/-",
+    "path": "{{$prefix}}/spec/containers/0",
     "value":
       {{- include "partials.debug" . | fromYaml | toPrettyJson | nindent 6 }}
   },
@@ -88,7 +88,7 @@
   {{- end }}
   {
     "op": "add",
-    "path": "{{$prefix}}/spec/containers/-",
+    "path": "{{$prefix}}/spec/containers/0",
     "value":
       {{- include "partials.proxy" . | fromYaml | toPrettyJson | nindent 6 }}
   },
